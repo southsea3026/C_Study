@@ -33,12 +33,41 @@ void replace(int pos, Element e){
     if (node != NULL)
         node->data = e;
 }
-Node* find(Element e){
+/*Node* find(Element e){
     Node* p;
    // for (p = head; p != NULL; p = p->link)
         if (p->data == e) return p;
     return NULL;
+}*/
+/*
+Node* find(Node* head, Element e){
+    Node* p = head;
+    if (p->data == NULL) return NULL;
+    while (p->link != NULL) {
+        if (p->data = value) return p;
+        p = p->link;
+    }
+    return NULL;
+}*/
+
+/*Node* find(Node* LL, Element dat){
+    Node* p = LL;
+    do{
+        if(p->data == dat)
+        return p;
+        p = p-> link;
+    } while(p != LL);
+    return NULL;
+}*/
+
+Node* find(Node* L, Element e){
+    Node* p;
+    for (p = L-> link; p != L; p = p->link){
+        if (p->data == e) return p;
 }
+    return NULL;
+}
+
 void insert_next(Node *before, Node *node){
     if (node != NULL){
         node->link = before->link;
