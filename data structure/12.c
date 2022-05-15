@@ -44,4 +44,17 @@ int main(void)
 {
   ListNode* head = NULL;
   
-  printf(
+  printf("> head list 생성.\n");
+  head = insert_first(head, 10);
+  print_list(head);
+  head = insert_first(head, 20);
+  print_list(head);
+  head = insert_first(head, 30);
+  print_list(head);
+  
+  printf("> After concat.\n");
+  head = reverser(head);
+  print_list(head);
+  
+  return 0;
+}
