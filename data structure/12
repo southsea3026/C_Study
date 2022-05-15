@@ -1,0 +1,29 @@
+#include <stdio.h> #include <stdlib.h> #include <string.h>
+typedef int element :
+//
+E99 PERE 298C.
+typedef struct ListNode {
+element data:
+struct ListNode* link: | } ListNode:
+// 23 24 void error (char* message)
+fprintf(stderr, "%sn", message): exit(1):
+ListNode* insert_first(ListNode* head, element value)
+ListNode* p = (ListNode*)malloc(sizeof(ListNode)]://(1) p->data = value://(2) p->link = head: // a5 20/6/9 2 //13) head = p.
+// DE EDE EZ//(4) return head:
+void print_list(ListNode* head) for (ListNode* p = head: p != NULL; p = p->link)
+printf("%d->", p->data): printf("NULL "n"):
+ListNode* reverse(ListNode* head)
+// *3 . 4. ListNode* p. * . *
+19
+p = head:
+// p= 9:25 05 2/45 Q = NULL:
+// q= 9:23 25 45 while (p != NULL) {
+// re 90% = 24E.
+// 13 9. QE PE THE 7 272C. q = pi p = p->Link: q->link = 1;
+// 99 33 38 6120.
+return q:
+// FILE 13 int main(void)
+ListNodex head = NULL:
+printf("> head list "): head = insert_first(head, 10): print_list(head): head = insert_first(head, 20): print_list(head): head = insert_first(head, 30): print_list(head):
+printf('> After concat #n"): head = reverse (head): print_list(head):
+return 0;
