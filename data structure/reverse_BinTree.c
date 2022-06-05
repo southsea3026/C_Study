@@ -60,3 +60,7 @@ void main(){
     printf("\n  Reversed Tree Pre-Order : "); reverse(root); preorder(root);
     printf("\n");
 }
+/* out come
+  Pre-Order : [A] [B] [C] [D] [E] [F] 
+  Reversed Tree Pre-Order : [A] [E] [F] [B] [D] [C] 
+*/
