@@ -1,3 +1,5 @@
+// https://medium.com/@dnjswbf/c%EC%96%B8%EC%96%B4-%EB%AF%B8%EB%A1%9C-%EA%B2%8C%EC%9E%84-aaa50e098cb2
+
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
