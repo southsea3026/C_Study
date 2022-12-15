@@ -1,4 +1,10 @@
+// Test2.cpp : Defines the entry point for the console application.
+//
+
+#include "targetver.h"
+
 #include <stdio.h>
+#include <tchar.h>
 #include <conio.h>
 #include <windows.h>
 #include <time.h>
@@ -7,6 +13,7 @@
 #include <stdlib.h>
 #include <math.h>
 #define SIZE 100
+
 /*드라마 프로그램 만들기(드라마 제목 감독 시청률 방송사) title viewer_ratings coach broadcastiong_company*/
 
 int id = 1, score, a, finish = 0; //
@@ -276,11 +283,20 @@ void search_record(FILE* fp)
 void list_record(FILE* fp)
 {
    DRAMA data;
-   fread(&data, sizeof(data), 1, fp);
-   printf("\n");
+   fseek(fp, 0, SEEK_SET);
+   getchar();
+   // fread(&data, sizeof(data), 1, fp);
+   // printf("\n");
    printf("==============================\n");
    printf("드라마 제목 \t 시청률  방송사  감독 \n");
    printf("==============================\n");
-   printf("%s \t %s \t %s \t %s\n", data.title, data.viewer_ratings, data.broadcastiong_company, data.coach);
+   // printf("%s \t %s \t %s \t %s\n", data.title, data.viewer_ratings, data.broadcastiong_company, data.coach);
+   while (!feof(fp))         //파일의 끝까지 반복한다.
+   {
+       if(fread(&data, 1, 1, fp) == 0) break;
+      else fseek(fp, -1, SEEK_CUR);
+      fread(&data, sizeof(data), 1, fp);
+      printf("%s \t %s \t %s \t %s\n", data.title, data.viewer_ratings, data.broadcastiong_company, data.coach);
+   }
    
 }
